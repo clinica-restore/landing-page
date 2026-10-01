@@ -181,6 +181,7 @@
     .service-description {
       display: -webkit-box;
       -webkit-box-orient: vertical;
+      line-clamp: 3;
       -webkit-line-clamp: 3;
       overflow: hidden;
       transition: all 0.4s ease;
@@ -189,6 +190,7 @@
     /* Texto completo quando o card está aberto */
     .service-card.active .service-description {
       display: block;
+      line-clamp: unset;
       -webkit-line-clamp: unset;
       overflow: visible;
     }
@@ -1853,6 +1855,7 @@
   <!-- BOTTOM NAV BAR (Shared Component Execution for Mobile) -->
   <nav
     class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter-mobile py-2 bg-surface/95 dark:bg-surface/95 backdrop-blur-lg shadow-lg">
+    
     <!-- Item 1: Início (Active State) -->
     <a class="flex flex-col items-center justify-center bg-primary-container/20 dark:bg-primary-container/30 text-primary dark:text-primary-fixed rounded-xl px-3 py-1 font-semibold active:scale-95 transition-transform duration-150"
       href="#inicio">
@@ -1860,24 +1863,28 @@
         style="font-variation-settings: &quot;FILL&quot; 1">home</span>
       <span class="font-label-md text-label-md">Início</span>
     </a>
+
     <!-- Item 2: Serviços -->
     <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:text-primary transition-colors active:scale-95 duration-150"
       href="#servicos">
       <span class="material-symbols-outlined text-xl" data-icon="physical_therapy">physical_therapy</span>
       <span class="font-label-md text-label-md">Serviços</span>
     </a>
+
     <!-- Item 3: Clube -->
     <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:text-primary transition-colors active:scale-95 duration-150"
       href="#clube">
       <span class="material-symbols-outlined text-xl" data-icon="card_membership">card_membership</span>
       <span class="font-label-md text-label-md">Clube</span>
     </a>
+
     <!-- Item 4: Contato -->
     <a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-3 py-1 hover:text-primary transition-colors active:scale-95 duration-150"
       href="#contato">
       <span class="material-symbols-outlined text-xl" data-icon="phone_in_talk">phone_in_talk</span>
       <span class="font-label-md text-label-md">Contato</span>
     </a>
+
   </nav>
 
   <!-- SAIBA MAIS CLUBE RESTORE -->
