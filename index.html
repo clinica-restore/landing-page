@@ -1161,14 +1161,15 @@
 
     <!-- 6. EVENTOS -->
     <section class="py-12 bg-surface px-gutter-mobile">
-      <div class="max-w-md mx-auto sm:max-w-5xl">
+      <div class="w-full max-w-6xl mx-auto">
+
+        <!-- TÍTULO DA SEÇÃO DE EVENTOS -->
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:max-w-4xl">
           <div>
-            <span
-              class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-1">Presença
-              de Campo</span>
-            <h2
-              class="font-headline-xl-mobile sm:font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-on-surface font-extrabold tracking-tight">
+            <span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-1">
+              Presença de Campo
+            </span>
+            <h2 class="font-headline-xl-mobile sm:font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-on-surface font-extrabold tracking-tight">
               A Restore nos Grandes Eventos
             </h2>
             <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 sm:mt-0">
@@ -1177,184 +1178,241 @@
           </div>
         </div>
 
-        <!-- Eventos -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- CARROSSEL DE EVENTOS -->
+        <div class="relative w-full">
 
-          <!-- Evento 1 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Semana do Comércio Sesc 2026"
-                src="https://drive.google.com/thumbnail?id=1ewbo4RxJNRcApJpAkYvy8wUzwAMv-Ddc&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Sesc - 2026
-              </span>
+          <!-- Viewport -->
+          <div id="events-carousel" class="overflow-hidden w-full" aria-label="Carrossel de eventos">
+
+            <!-- Track -->
+            <div id="events-track" class="flex transition-transform duration-500 ease-in-out">
+
+              <!-- Evento 1 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Semana do Comércio Sesc 2026"
+                    src="https://drive.google.com/thumbnail?id=1ewbo4RxJNRcApJpAkYvy8wUzwAMv-Ddc&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Sesc - 2026
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Semana do Comércio
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 2 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Pré-Intermed 2026"
+                    src="https://drive.google.com/thumbnail?id=1szKdE5XX2zfGbn1Xq4OeKpV4sx8mRTml&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Medicina Prudente - 2026
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Pré-Intermed 2026
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 3 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Meia Maratona de Prudente 2026"
+                    src="https://drive.google.com/thumbnail?id=1ce9MGLEJz2Uuz1VGlaEdkwvCYQPHDf79&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Track&Field Experience Running 2026
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    4° Meia Maratona de Prudente
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 4 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Evento de Recovery SpinCycle 2026"
+                    src="https://drive.google.com/thumbnail?id=1jqSZl9N6AI-b-KfuekU4ImnyjNhSJ1q5&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    SpinCycle 2026
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Evento de Recovery
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 5 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Treinão FutRun 2025"
+                    src="https://drive.google.com/thumbnail?id=1VwUQ0HIvCIW2Sy0o13XpO3z__94-MuiC&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    FutRun 2025
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Treinão FutRun
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 6 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Semana de Saúde e Qualidade de Vida Sesc 2025"
+                    src="https://drive.google.com/thumbnail?id=1OaqMtCogUAwk7hRC7mPqoCGXd1VlvJKN&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Sesc 2025
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Semana de Saúde e Qualidade de Vida
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 7 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Pré-Intermed 2025"
+                    src="https://drive.google.com/thumbnail?id=1m8AmJpDxiZdnmncfpc7oVs-KwHJOMBIx&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Medicina Prudente 2025
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    Pré-Intermed 2025
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 8 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Corrida OAB 2025"
+                    src="https://drive.google.com/thumbnail?id=1tcAmoJQFdKaeMnS2ftyAvVWNQTAUubfa&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    OAB 2025
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    6ª Corrida da OAB
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 9 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="1ª Corrida da Edaus 2025"
+                    src="https://drive.google.com/thumbnail?id=1ob4M4EAN7Xt1fRiXmtYFqog7I2ZlRvdw&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Edaus 2025
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    1ª Corrida da Edaus
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 10 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="O Inter 2024"
+                    src="https://drive.google.com/thumbnail?id=1g0viCVXfNDo8T45-mxI0AMlmfN6Vyhrr&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    Unesp 2024
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    O Inter 2024
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Evento 11 -->
+              <div class="event-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
+                <div class="relative h-44 bg-surface-variant">
+                  <img
+                    class="w-full h-full object-cover object-[0%_25%]"
+                    data-alt="Copa Estadual de Futebol de Campo OABSP/CAASP 2024"
+                    src="https://drive.google.com/thumbnail?id=1-1AXxRXlrmcD0cCB96JC_Y38lZNkd6wg&sz=w1000"
+                  />
+                  <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
+                    OABSP/CAASP 2024
+                  </span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+                    23ª Copa Estadual de Futebol de Campo OABSP/CAASP
+                  </h3>
+                </div>
+              </div>
+
             </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Semana do Comércio</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-          
-          <!-- Evento 2 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Pré-Intermed 2026"
-                src="https://drive.google.com/thumbnail?id=1szKdE5XX2zfGbn1Xq4OeKpV4sx8mRTml&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Medicina Prudente - 2026
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Pré-Intermed 2026</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
+
           </div>
 
-          <!-- Evento 3 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Meia Maratona de Prudente 2026"
-                src="https://drive.google.com/thumbnail?id=1ce9MGLEJz2Uuz1VGlaEdkwvCYQPHDf79&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Track&Field Experience Running 2026
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">4° Meia Maratona de Prudente</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
+          <!-- NAVEGAÇÃO ANTERIOR -->
+          <button id="events-prev" type="button" aria-label="Eventos anteriores" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface-container-lowest/95 border border-outline-variant/50 shadow-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            &#10094;
+          </button>
 
-          <!-- Evento 4 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Evento de Recovery SpinCycle 2026"
-                src="https://drive.google.com/thumbnail?id=1jqSZl9N6AI-b-KfuekU4ImnyjNhSJ1q5&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                SpinCycle 2026
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Evento de Recovery</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
+          <!-- NAVEGAÇÃO PRÓXIMO -->
+          <button id="events-next" type="button" aria-label="Próximos eventos" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface-container-lowest/95 border border-outline-variant/50 shadow-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            &#10095;
+          </button>
 
-          <!-- Evento 5 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Treinão FutRun 2025"
-                src="https://drive.google.com/thumbnail?id=1VwUQ0HIvCIW2Sy0o13XpO3z__94-MuiC&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                FutRun 2025
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Treinão FutRun</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
 
-          <!-- Evento 6 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Semana de Saúde e Qualidade de Vida Sesc 2025"
-                src="https://drive.google.com/thumbnail?id=1OaqMtCogUAwk7hRC7mPqoCGXd1VlvJKN&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Sesc 2025
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Semana de Saúde e Qualidade de Vida</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-
-          <!-- Evento 7 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Pré-Intermed 2025"
-                src="https://drive.google.com/thumbnail?id=1m8AmJpDxiZdnmncfpc7oVs-KwHJOMBIx&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Medicina Prudente 2025
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">Pré-Intermed 2025</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-
-          <!-- Evento 8 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="Corrida OAB 2025"
-                src="https://drive.google.com/thumbnail?id=1tcAmoJQFdKaeMnS2ftyAvVWNQTAUubfa&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                OAB 2025
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">6ª Corrida da OAB</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-
-          <!-- Evento 9 -->
-           <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="1ª Corrida da Edaus 2025"
-                src="https://drive.google.com/thumbnail?id=1ob4M4EAN7Xt1fRiXmtYFqog7I2ZlRvdw&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Edaus 2025
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">1ª Corrida da Edaus</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-
-          <!-- Evento 10 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover"
-                data-alt="O Inter 2024"
-                src="https://drive.google.com/thumbnail?id=1g0viCVXfNDo8T45-mxI0AMlmfN6Vyhrr&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                Unesp 2024
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">O Inter 2024</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
-
-          <!-- Evento 11 -->
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/40 shadow-sm flex flex-col">
-            <div class="relative h-44 bg-surface-variant">
-              <img class="w-full h-full object-cover object-[0%_25%]"
-                data-alt="Copa Estadual de Futebol de Campo OABSP/CAASP 2024"
-                src="https://drive.google.com/thumbnail?id=1-1AXxRXlrmcD0cCB96JC_Y38lZNkd6wg&sz=w1000" />
-              <span class="absolute top-3 left-3 bg-primary-container text-surface-container-lowest font-label-caps text-label-caps font-bold px-2 py-1 rounded">
-                OABSP/CAASP 2024
-              </span>
-            </div>
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">23ª Copa Estadual de Futebol de Campo OABSP/CAASP</h3>
-              <!-- <p class="font-body-sm text-body-sm text-on-surface-variant"></p> -->
-            </div>
-          </div>
+          <!-- Indicadores -->
+          <div id="events-dots" class="flex justify-center gap-2 mt-5" aria-label="Navegação do carrossel"></div>
 
         </div>
 
@@ -2172,6 +2230,356 @@
       });
     });
 
+  </script>
+
+  <!-- SCRIPT - CARROSSEL DE EVENTOS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const viewport = document.getElementById("events-carousel");
+      const track = document.getElementById("events-track");
+
+      const originalCards = Array.from(
+        track.querySelectorAll(".event-card")
+      );
+
+      const prevButton = document.getElementById("events-prev");
+      const nextButton = document.getElementById("events-next");
+      const dots = document.getElementById("events-dots");
+
+      let currentPage = 0;
+      let totalPages = 0;
+      let autoPlay = null;
+
+
+      function getColumns() {
+
+        if (window.innerWidth < 640) {
+          return 1;
+        }
+
+        if (window.innerWidth < 1024) {
+          return 2;
+        }
+
+        return 3;
+      }
+
+
+      function buildCarousel() {
+
+        const columns = getColumns();
+
+        /*
+        * Quantidade de cards por página:
+        *
+        * Mobile  = 1
+        * Tablet  = 4 (2 x 2)
+        * Desktop = 6 (3 x 2)
+        */
+        const cardsPerPage =
+          columns === 1
+            ? 1
+            : columns * 2;
+
+
+        /*
+        * Guarda os cards antes de reconstruir
+        */
+        const cards = originalCards;
+
+
+        /*
+        * Limpa o track
+        */
+        track.innerHTML = "";
+
+
+        /*
+        * Cria as páginas
+        */
+        const pages = [];
+
+        for (
+          let i = 0;
+          i < cards.length;
+          i += cardsPerPage
+        ) {
+
+          const page = document.createElement("div");
+
+          page.className = `
+            flex-none
+            w-full
+            grid
+            gap-4
+          `;
+
+          /*
+          * Desktop/tablet:
+          * duas linhas
+          */
+          if (columns > 1) {
+
+            page.style.gridTemplateColumns =
+              `repeat(${columns}, minmax(0, 1fr))`;
+
+            page.style.gridTemplateRows =
+              "repeat(2, minmax(0, 1fr))";
+
+          }
+
+          /*
+          * Mobile:
+          * uma coluna
+          */
+          else {
+
+            page.style.gridTemplateColumns = "1fr";
+          }
+
+
+          /*
+          * Adiciona os cards da página
+          *
+          * A ordem é proposital:
+          *
+          * 1 3 5
+          * 2 4 6
+          *
+          * no desktop.
+          */
+          const pageCards =
+            cards.slice(i, i + cardsPerPage);
+
+
+          if (columns > 1) {
+
+            for (let col = 0; col < columns; col++) {
+
+              const topCard = pageCards[col * 2];
+
+              const bottomCard = pageCards[col * 2 + 1];
+
+              if (topCard) {
+                page.appendChild(topCard);
+              }
+
+              if (bottomCard) {
+                page.appendChild(bottomCard);
+              }
+            }
+
+          } else {
+
+            pageCards.forEach(card => {
+              page.appendChild(card);
+            });
+          }
+
+
+          pages.push(page);
+          track.appendChild(page);
+        }
+
+
+        totalPages = pages.length;
+
+
+        if (currentPage >= totalPages) {
+          currentPage = 0;
+        }
+
+
+        createDots();
+        updateCarousel();
+      }
+
+
+      function updateCarousel() {
+
+        track.style.transform =
+          `translateX(-${currentPage * 100}%)`;
+
+        updateDots();
+      }
+
+
+      function createDots() {
+
+        dots.innerHTML = "";
+
+
+        /*
+        * Não mostra indicadores se houver
+        * somente uma página.
+        */
+        if (totalPages <= 1) {
+          return;
+        }
+
+
+        for (let i = 0; i < totalPages; i++) {
+
+          const dot = document.createElement("button");
+
+          dot.type = "button";
+
+          dot.setAttribute(
+            "aria-label",
+            `Ir para página ${i + 1}`
+          );
+
+
+          dot.className = `
+            h-2.5
+            rounded-full
+            transition-all
+            duration-300
+            ${i === currentPage
+              ? "w-6 bg-primary"
+              : "w-2.5 bg-outline-variant"}
+          `;
+
+
+          dot.addEventListener("click", () => {
+
+            currentPage = i;
+
+            updateCarousel();
+            restartAutoPlay();
+
+          });
+
+
+          dots.appendChild(dot);
+        }
+      }
+
+
+      function updateDots() {
+
+        Array.from(dots.children).forEach(
+          (dot, index) => {
+
+            dot.className = `
+              h-2.5
+              rounded-full
+              transition-all
+              duration-300
+              ${index === currentPage
+                ? "w-6 bg-primary"
+                : "w-2.5 bg-outline-variant"}
+            `;
+          }
+        );
+      }
+
+
+      function next() {
+
+        currentPage++;
+
+        if (currentPage >= totalPages) {
+          currentPage = 0;
+        }
+
+        updateCarousel();
+      }
+
+
+      function previous() {
+
+        currentPage--;
+
+        if (currentPage < 0) {
+          currentPage = totalPages - 1;
+        }
+
+        updateCarousel();
+      }
+
+
+      function startAutoPlay() {
+
+        clearInterval(autoPlay);
+
+        autoPlay = setInterval(() => {
+
+          next();
+
+        }, 5000);
+      }
+
+
+      function restartAutoPlay() {
+
+        clearInterval(autoPlay);
+
+        startAutoPlay();
+      }
+
+
+      nextButton.addEventListener("click", () => {
+
+        next();
+        restartAutoPlay();
+
+      });
+
+
+      prevButton.addEventListener("click", () => {
+
+        previous();
+        restartAutoPlay();
+
+      });
+
+
+      /*
+      * Pausa quando o mouse estiver sobre o carrossel
+      */
+      viewport.addEventListener("mouseenter", () => {
+
+        clearInterval(autoPlay);
+
+      });
+
+
+      viewport.addEventListener("mouseleave", () => {
+
+        startAutoPlay();
+
+      });
+
+
+      /*
+      * Reconstrói o carrossel quando muda
+      * entre mobile / tablet / desktop.
+      */
+      let resizeTimeout;
+
+      window.addEventListener("resize", () => {
+
+        clearTimeout(resizeTimeout);
+
+        resizeTimeout = setTimeout(() => {
+
+          buildCarousel();
+
+        }, 150);
+
+      });
+
+
+      /*
+      * Inicialização
+      */
+      buildCarousel();
+
+      startAutoPlay();
+
+    });
   </script>
 
 </body>
