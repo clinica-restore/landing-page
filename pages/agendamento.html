@@ -10,11 +10,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -154,19 +152,15 @@
 
   <main class="pt-16">
     <section class="py-10 sm:py-14 px-gutter-mobile bg-linear-to-b from-surface via-surface-container-lowest to-surface">
-      <div class="max-w-md mx-auto sm:max-w-4xl">
+      <div class="max-w-md mx-auto sm:max-w-6xl">
 
         <div class="text-center mb-8 sm:mb-10">
           <span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest block mb-1">
-            Agenda online
-          </span>
-          <h1
-            class="font-headline-xl-mobile sm:font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-on-surface font-extrabold tracking-tight">
-            Autoagendamento
-          </h1>
+            Agenda online</span>
+          <h1 class="font-headline-xl-mobile sm:font-headline-xl text-headline-xl-mobile sm:text-headline-xl text-on-surface font-extrabold tracking-tight">
+            Autoagendamento</h1>
           <p class="font-body-md sm:max-w-4xl text-body-md text-on-surface-variant mt-2 max-w-lg mx-auto">
-            Escolha o profissional ou o serviço de recovery e reserve seu horário.
-          </p>
+            Escolha o profissional ou o serviço de recovery e reserve seu horário.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
@@ -176,7 +170,22 @@
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2ssRbbUW-S4HyIXsZhG8bEIC3NxAG8TfEv9S2LJMbErW7I0cHEAeJM2l2zimWh5FlwAJMc3MQ6"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            class="relative isolate overflow-hidden bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            
+            <!-- Imagem à direita com fade à esquerda -->
+            <div
+              class="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10 pointer-events-none">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/70 to-transparent z-10">
+              </div>
+              <img
+                src="/assets/logos/logocr.png"
+                alt=""
+                aria-hidden="true"
+                class="w-full h-full object-contain object-[70%_40%] opacity-90">
+            </div>
+
+            <!-- Foto do profissional -->
             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-primary-container p-0.5 shrink-0 sm:mb-0">
               <img
                 class="w-full h-full object-cover rounded-full"
@@ -201,7 +210,22 @@
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ394AHHpU-VrGn2Q3svAmu8LEJrkqHiOpaqsli0FPIaa-pft6maLgGbFHUXVzPr9ZfQlwWY9LTw"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            class="relative isolate overflow-hidden bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+
+            <!-- Imagem à direita com fade à esquerda -->
+            <div
+              class="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10 pointer-events-none">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/70 to-transparent z-10">
+              </div>
+              <img
+                src="/assets/logos/logocr.png"
+                alt=""
+                aria-hidden="true"
+                class="w-full h-full object-contain object-[70%_40%] opacity-90">
+            </div>
+
+            <!-- Foto do profissional -->
             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-primary-container p-0.5 shrink-0 sm:mb-0">
               <img
                 class="w-full h-full object-cover rounded-full"
@@ -209,12 +233,21 @@
                 alt="Alex Martins"
                 loading="lazy">
             </div>
-            <div class="flex flex-col items-center sm:items-start sm:flex-1 sm:min-w-0">
-              <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Alex Martins</h2>
-              <span class="text-primary font-label-lg text-label-lg font-semibold mb-2">Fisioterapeuta</span>
+
+            <!-- Informações -->
+            <div class="relative z-20 flex flex-col items-center sm:items-start sm:flex-1 sm:min-w-0">
+              <h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Alex Martins
+              </h2>
+
+              <span class="text-primary font-label-lg text-label-lg font-semibold mb-2">
+                Fisioterapeuta
+              </span>
+
               <span class="inline-block bg-surface-variant px-3 py-1 rounded-full text-on-surface-variant font-label-caps text-label-caps mb-4">
                 CREFITO 400372-F
               </span>
+
               <span class="mt-auto font-label-lg text-label-lg text-primary-container font-bold flex items-center gap-1 group-hover:underline">
                 Agendar
               </span>
@@ -226,7 +259,22 @@
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0yarafdh1s_80YmciaUQFpCFDUMdzZkSemTgMP7n7W9F4xglKutmux5ZzfWONZ8dOnszGckApq"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            class="relative isolate overflow-hidden bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            
+            <!-- Imagem à direita com fade à esquerda -->
+            <div
+              class="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10 pointer-events-none">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/70 to-transparent z-10">
+              </div>
+              <img
+                src="/assets/logos/logocr.png"
+                alt=""
+                aria-hidden="true"
+                class="w-full h-full object-contain object-[70%_40%] opacity-90">
+            </div>
+
+            <!-- Foto do profissional -->
             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-primary-container p-0.5 shrink-0 sm:mb-0">
               <img
                 class="w-full h-full object-cover rounded-full"
@@ -251,7 +299,22 @@
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0QAqFVylUNnQwI16Z42o0wjiGTEkVhq90cwSc1nrMJOndwffGlJnqN8nnXYx90xEven9TTyuJx"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            class="relative isolate overflow-hidden bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left sm:gap-5 hover:-translate-y-1 hover:border-primary-container transition-all group">
+            
+            <!-- Imagem à direita com fade à esquerda -->
+            <div
+              class="hidden lg:block absolute inset-y-0 right-0 w-1/2 -z-10 pointer-events-none">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/70 to-transparent z-10">
+              </div>
+              <img
+                src="/assets/logos/logocr.png"
+                alt=""
+                aria-hidden="true"
+                class="w-full h-full object-contain object-[70%_40%] opacity-90">
+            </div>
+
+            <!-- Foto do profissional -->
             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-primary-container p-0.5 shrink-0 sm:mb-0">
               <img
                 class="w-full h-full object-cover rounded-full"
@@ -329,7 +392,7 @@
 
   <footer class="bg-surface-container-lowest border-t border-surface-variant pt-8 pb-10 px-gutter-mobile">
     <div
-      class="max-w-md mx-auto sm:max-w-4xl text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+      class="max-w-md mx-auto sm:max-w-6xl text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
       <div>
         <div class="flex items-center justify-center sm:justify-start gap-2 mb-2">
           <img src="https://drive.google.com/thumbnail?id=11xlXedCTOmkAPAOwgl_NPoZlj6CdAo8A"
