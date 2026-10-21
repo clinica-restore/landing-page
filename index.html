@@ -2270,6 +2270,182 @@
     });
   </script>
 
+  <!-- CARROSSEIS (serviços + corpo clínico) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      function initCarousel({
+        carouselId,
+        cardSelector,
+        nextButtonId,
+        prevButtonId,
+        dotsContainerId,
+        dotLabel
+      }) {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+
+        const cards = [...carousel.querySelectorAll(cardSelector)];
+        const nextButton = document.getElementById(nextButtonId);
+        const prevButton = document.getElementById(prevButtonId);
+        const dotsContainer = document.getElementById(dotsContainerId);
+
+        if (!cards.length || !nextButton || !prevButton || !dotsContainer) return;
+
+        let currentIndex = 0;
+        let autoplay;
+        let isPaused = false;
+
+        cards.forEach((_, index) => {
+          const dot = document.createElement("button");
+
+          dot.type = "button";
+          dot.setAttribute("aria-label", `${dotLabel} ${index + 1}`);
+          dot.className =
+            "w-2 h-2 rounded-full bg-outline-variant transition-all duration-300";
+
+          dot.addEventListener("click", () => {
+            goToSlide(index);
+            restartAutoplay();
+          });
+
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = [...dotsContainer.children];
+
+        function goToSlide(index) {
+          currentIndex = (index + cards.length) % cards.length;
+
+          const card = cards[currentIndex];
+
+          carousel.scrollTo({
+            left: card.offsetLeft - carousel.offsetLeft,
+            behavior: "smooth"
+          });
+
+          updateDots();
+        }
+
+        function updateDots() {
+          dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+              dot.classList.remove("bg-outline-variant", "w-2");
+              dot.classList.add("bg-primary", "w-6");
+            } else {
+              dot.classList.remove("bg-primary", "w-6");
+              dot.classList.add("bg-outline-variant", "w-2");
+            }
+          });
+        }
+
+        function nextSlide() {
+          goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+          goToSlide(currentIndex - 1);
+        }
+
+        function startAutoplay() {
+          clearInterval(autoplay);
+
+          autoplay = setInterval(() => {
+            if (!isPaused) {
+              nextSlide();
+            }
+          }, 3500);
+        }
+
+        function stopAutoplay() {
+          clearInterval(autoplay);
+        }
+
+        function restartAutoplay() {
+          stopAutoplay();
+          startAutoplay();
+        }
+
+        nextButton.addEventListener("click", () => {
+          nextSlide();
+          restartAutoplay();
+        });
+
+        prevButton.addEventListener("click", () => {
+          prevSlide();
+          restartAutoplay();
+        });
+
+        carousel.addEventListener("mouseenter", () => {
+          isPaused = true;
+        });
+
+        carousel.addEventListener("mouseleave", () => {
+          isPaused = false;
+        });
+
+        carousel.addEventListener("touchstart", () => {
+          isPaused = true;
+        }, { passive: true });
+
+        carousel.addEventListener("touchend", () => {
+          setTimeout(() => {
+            isPaused = false;
+          }, 1500);
+        }, { passive: true });
+
+        let scrollTimeout;
+
+        carousel.addEventListener("scroll", () => {
+          clearTimeout(scrollTimeout);
+
+          scrollTimeout = setTimeout(() => {
+            const scrollPosition = carousel.scrollLeft;
+
+            let closestIndex = 0;
+            let closestDistance = Infinity;
+
+            cards.forEach((card, index) => {
+              const distance = Math.abs(
+                card.offsetLeft - carousel.offsetLeft - scrollPosition
+              );
+
+              if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+              }
+            });
+
+            currentIndex = closestIndex;
+            updateDots();
+          }, 100);
+        });
+
+        updateDots();
+        startAutoplay();
+      }
+
+      initCarousel({
+        carouselId: "services-carousel",
+        cardSelector: ".service-card",
+        nextButtonId: "services-next",
+        prevButtonId: "services-prev",
+        dotsContainerId: "services-dots",
+        dotLabel: "Ir para serviço"
+      });
+
+      initCarousel({
+        carouselId: "clinical-carousel",
+        cardSelector: ".clinical-card",
+        nextButtonId: "carousel-next",
+        prevButtonId: "carousel-prev",
+        dotsContainerId: "carousel-dots",
+        dotLabel: "Ir para especialista"
+      });
+
+    });
+  </script>
+
 </body>
 
 </html>
