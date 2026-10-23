@@ -1698,17 +1698,29 @@
             <!-- Tabela de Informações -->
             <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm space-y-4">
               
-              <!-- Endereço -->
-              <div class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-2xl mt-0.5"
-                  data-icon="location_on">location_on</span>
+              <!-- Endereço clicável -->
+              <a href="https://maps.app.goo.gl/wsPmrw31VyUtBnwx9" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-start gap-3 rounded-xl p-3 -m-3 transition-colors duration-200 hover:bg-surface-variant/50 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 group"
+                aria-label="Ver endereço da Clínica no Google Maps"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-2xl mt-0.5 transition-transform duration-200 group-hover:scale-110"
+                  data-icon="location_on"
+                  aria-hidden="true"
+                >location_on</span>
+
                 <div>
-                  <h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Endereço da Clínica</h4>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                    Endereço da Clínica
+                  </h4>
+
                   <p class="font-body-sm text-body-sm text-on-surface-variant">
                     Av. Washington Luiz, 1157 - Vila do Estádio - Presidente Prudente
                   </p>
                 </div>
-              </div>
+              </a>
 
               <!-- Horários de Atendimento -->
               <div class="flex items-start gap-3 border-t border-surface-variant pt-3">
@@ -1826,6 +1838,22 @@
               </button>
 
             </form>
+          </div>
+
+          <!-- EMBED DO MAPS -->
+          <div class="col-span-2 hidden w-full md:block">
+            <div class="mx-auto w-full ">
+              <div class="w-full box-border rounded-2xl bg-surface text-on-surface p-4 md:p-6 lg:p-8 relative overflow-hidden shadow-2xl border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.192710530906!2d-51.39502842471279!3d-22.118626979817645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f5358237ab03%3A0xc3d3e79c2b0dd7cc!2sCl%C3%ADnica%20Restore!5e0!3m2!1spt-BR!2sbr!4v1792775993223!5m2!1i1024!2i768!4f13.1"
+                  class="block w-full h-[280px] md:h-[250px] lg:h-[300px] rounded-xl border-0"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  title="Localização da Clínica Restore">
+                </iframe>
+              </div>
+            </div>
           </div>
 
         </div>
